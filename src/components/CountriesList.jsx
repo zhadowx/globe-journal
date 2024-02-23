@@ -1,11 +1,12 @@
-import PropTypes from "prop-types";
+import { useCities } from "../contexts/CitiesContext.jsx";
 
 import styles from "./CountriesList.module.css";
 import CountryItem from "./CountryItem.jsx";
 import Message from "./Message.jsx";
 import Spinner from "./Spinner.jsx";
 
-export default function CountriesList({ cities, isLoading }) {
+export default function CountriesList() {
+  const { cities, isLoading } = useCities();
   if (isLoading) return <Spinner />;
 
   if (!cities.length)
@@ -27,8 +28,3 @@ export default function CountriesList({ cities, isLoading }) {
     </ul>
   );
 }
-
-CountriesList.propTypes = {
-  cities: PropTypes.array.isRequired,
-  isLoading: PropTypes.bool.isRequired,
-};
