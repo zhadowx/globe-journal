@@ -1,0 +1,11 @@
+{
+  "folders": [
+	{
+		"name": "worldwise",
+		"path": ".."
+	}
+],
+  "settings": {
+    "editor.formatOnSave": true
+  }
+}
