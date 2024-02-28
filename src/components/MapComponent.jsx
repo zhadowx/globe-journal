@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 
-import PropTypes from "prop-types";
 import {
   MapContainer,
   TileLayer,
@@ -76,10 +75,6 @@ function ChangeCenter({ position }) {
   map.setView(position);
   return null;
 }
-
-ChangeCenter.propTypes = {
-  position: PropTypes.arrayOf(PropTypes.number).isRequired,
-};
 
 function DetectClick() {
   const navigate = useNavigate();
